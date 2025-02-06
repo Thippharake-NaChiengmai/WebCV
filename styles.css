@@ -1,43 +1,73 @@
 body {
     font-family: 'Ubuntu', sans-serif;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+#toggle-text {
+    text-decoration: underline;
+    color: blue;
+    font-weight: bold;
+}
+
+#toggle-text:hover {
+    color: darkblue;
 }
 
 a {
-text-decoration: none;
+    text-decoration: none;
 }
 
-section { /* Apply to all sections */
-    border-radius: 15px; /* Rounded corners */
-    border: 1px solid #dee2e6; /* Light gray border */
-    padding: 20px; /* Add some padding inside the box */
-    margin-bottom: 20px; /* Space between sections */
-    background-color: white; /* White background for contrast */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+section {
+    /* Apply to all sections */
+    border-radius: 15px;
+    /* Rounded corners */
+    border: 1px solid #dee2e6;
+    /* Light gray border */
+    padding: 20px;
+    /* Add some padding inside the box */
+    margin-bottom: 20px;
+    /* Space between sections */
+    background-color: white;
+    /* White background for contrast */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* subtle shadow */
 }
 
-section h2{
+section h2 {
     transition: transform 0.3s ease;
 }
 
-section:hover{
-    transform: scale(1.02); /* ขยายขนาดเล็กน้อย */
+section:hover {
+    transform: scale(1.02);
+    /* ขยายขนาดเล็กน้อย */
 }
 
-section:hover h2{
+section:hover h2 {
     text-decoration: underline;
     color: gray;
 }
 
 .custom-border-radius {
-    border-radius: 15px; /* ปรับขอบให้โค้ง */
-    border: 2px solid #ccc; /* เพิ่มเส้นขอบที่อ่อน */
+    border-radius: 15px;
+    /* ปรับขอบให้โค้ง */
+    border: 2px solid #ccc;
+    /* เพิ่มเส้นขอบที่อ่อน */
 }
 
 /* กำหนดขนาดของรูปภาพให้เท่ากัน */
 .carousel-item img {
-    width: 100%;      /* ให้ขยายเต็มความกว้าง */
-    height: 800px;    /* กำหนดความสูงของรูป */
-    object-fit: cover; /* ทำให้รูปภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
+    width: 100%;
+    /* ให้ขยายเต็มความกว้าง */
+    height: 800px;
+    /* กำหนดความสูงของรูป */
+    object-fit: cover;
+    /* ทำให้รูปภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
 }
 
 /* การจัดตำแหน่งข้อความใน carousel */
@@ -53,12 +83,14 @@ section:hover h2{
 /* สำหรับหน้าจอที่มีขนาดเล็ก */
 @media (max-width: 767px) {
     .custom-border-radius {
-        margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างเมื่อหน้าจอเล็ก */
+        margin-bottom: 20px;
+        /* เพิ่มระยะห่างด้านล่างเมื่อหน้าจอเล็ก */
     }
 }
 
 @media (max-width: 767px) {
     .carousel-item img {
-        height: 200px;  /* ลดความสูงของรูปเมื่ออยู่บนมือถือ */
+        height: 200px;
+        /* ลดความสูงของรูปเมื่ออยู่บนมือถือ */
     }
 }

@@ -2,7 +2,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    padding-top: 45px;
 }
 
 body.fade-in {
@@ -21,14 +20,6 @@ body.fade-in {
 
 a {
     text-decoration: none;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
 }
 
 section {

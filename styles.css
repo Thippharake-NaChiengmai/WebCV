@@ -39,13 +39,26 @@ section {
     /* subtle shadow */
 }
 
+/* In your styles.css file or within a <style> tag */
+.rounded-circle {
+    border: 5px solid white; /* Adjust border thickness and color as needed */
+    /* Or for a more subtle border: */
+    /* border: 2px solid rgba(255, 255, 255, 0.5);  */ /* Semi-transparent white */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+/* Example to target the specific image in the sidebar */
+.col-md-3 .rounded-circle { /* Or a more specific selector if you have multiple */
+    border-color: #f0ad4e; /* Example using a golden yellow color */
+    border-width: 3px;
+}
+
 section h2 {
     transition: transform 0.3s ease;
 }
 
 section:hover {
     transform: scale(1.02);
-    /* ขยายขนาดเล็กน้อย */
 }
 
 section:hover h2 {
@@ -55,22 +68,15 @@ section:hover h2 {
 
 .custom-border-radius {
     border-radius: 15px;
-    /* ปรับขอบให้โค้ง */
     border: 2px solid #ccc;
-    /* เพิ่มเส้นขอบที่อ่อน */
 }
 
-/* กำหนดขนาดของรูปภาพให้เท่ากัน */
 .carousel-item img {
     width: 100%;
-    /* ให้ขยายเต็มความกว้าง */
     height: 800px;
-    /* กำหนดความสูงของรูป */
     object-fit: cover;
-    /* ทำให้รูปภาพเต็มพื้นที่โดยไม่เสียสัดส่วน */
 }
 
-/* การจัดตำแหน่งข้อความใน carousel */
 .carousel-caption {
     position: absolute;
     bottom: 20px;
@@ -80,17 +86,28 @@ section:hover h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* สำหรับหน้าจอที่มีขนาดเล็ก */
+.progress {
+    height: 20px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 @media (max-width: 767px) {
     .custom-border-radius {
         margin-bottom: 20px;
-        /* เพิ่มระยะห่างด้านล่างเมื่อหน้าจอเล็ก */
     }
 }
 
 @media (max-width: 767px) {
     .carousel-item img {
         height: 200px;
-        /* ลดความสูงของรูปเมื่ออยู่บนมือถือ */
     }
 }

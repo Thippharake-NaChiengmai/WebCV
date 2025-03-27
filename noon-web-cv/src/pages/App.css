@@ -1,0 +1,140 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#toggle-text {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+}
+
+#toggle-text:hover {
+  color: darkblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  /* Apply to all sections */
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 1px solid #dee2e6;
+  /* Light gray border */
+  padding: 20px;
+  /* Add some padding inside the box */
+  margin-bottom: 20px;
+  /* Space between sections */
+  background-color: white;
+  /* White background for contrast */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
+}
+
+/* In your styles.css file or within a <style> tag */
+.rounded-circle {
+  border: 5px solid white;
+  /* Adjust border thickness and color as needed */
+  /* Or for a more subtle border: */
+  /* border: 2px solid rgba(255, 255, 255, 0.5);  */
+  /* Semi-transparent white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Optional: Add a subtle shadow */
+}
+
+/* Example to target the specific image in the sidebar */
+.col-md-3 .rounded-circle {
+  /* Or a more specific selector if you have multiple */
+  border-color: #f0ad4e;
+  /* Example using a golden yellow color */
+  border-width: 3px;
+}
+
+section h2 {
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+section:hover h2 {
+  text-decoration: underline;
+  color: gray;
+}
+
+.custom-border-radius {
+  border-radius: 15px;
+  border: 2px solid #ccc;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+  height: 20px; /* ปรับขนาดตามต้องการ */
+  border-radius: 5px; /* ขอบมน */
+  overflow: hidden; /* ให้ไม่ให้แสดงเกินกรอบ */
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 2s ease-out; /* เพิ่ม transition ให้เคลื่อนไหวอย่างนุ่มนวล */
+  border-radius: 5px;
+}
+
+.bg-progress-bar {
+  background-color: #28a745 !important;
+}
+
+/* Add this to your App.css or any other CSS file */
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+.progress-bar {
+  animation: progress-animation 2s ease-out forwards;
+}
+
+@media (max-width: 767px) {
+  .custom-border-radius {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-item img {
+      height: 200px;
+  }
+}

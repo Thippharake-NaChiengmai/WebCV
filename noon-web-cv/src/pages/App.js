@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const NoonWebCV = () => {
 
@@ -96,36 +98,7 @@ const NoonWebCV = () => {
   return (
     <div className="min-vh-100 bg-light font-ubuntu">
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white py-3">
-        <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1">Noon Web CV</span>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              {['Intro', 'Contact', 'Experience', 'Education', 'Skills', 'Hobby', 'Portfolio'].map(section => (
-                <li className="nav-item" key={section}>
-                  <a
-                    href={`#${section.toLowerCase()}`}
-                    className="nav-link text-white mx-2 hover:text-success"
-                  >
-                    {section}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="row g-0">
         {/* Sidebar */}
@@ -319,9 +292,7 @@ const NoonWebCV = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center py-5 px-5">
-        <p className="mb-0">&copy; 2025 Noon Web CV. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

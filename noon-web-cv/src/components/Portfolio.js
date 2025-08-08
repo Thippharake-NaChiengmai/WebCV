@@ -6,23 +6,27 @@ export default function Portfolio() {
   const portfolioProjects = [
     {
       image: '/images/adpro1.jpg',
-      title: 'Advanced-Programming Project 1',
-      description: 'This project about creating crop & edge detecting program'
+      title: 'Image Crop & Edge Detector Program',
+      description: 'A Java-based image processing application that implements advanced algorithms for automatic image cropping and edge detection. Features include real-time image analysis, customizable detection parameters, and export functionality.',
+      link: 'https://github.com/quentinx27/adpro-project'
     },
     {
       image: '/images/adpro2.jpg',
-      title: 'Advanced-Programming Project 2',
-      description: 'This project about creating Asteroid game'
+      title: 'Asteroid Game',
+      description: 'An interactive 2D space shooter game built with Java and JavaFX. Players control a spaceship to destroy asteroids while avoiding collisions. Features include score tracking, multiple difficulty levels, and smooth animations.',
+      link: 'https://github.com/quentinx27/adproProject2'
     },
     {
-      image: '/images/data.png',
-      title: 'Database Project',
-      description: 'This project about creating database for some organization'
+      image: '/images/CJ.png',
+      title: 'CJ Streetware Database System',
+      description: 'A comprehensive database management system for streetwear retail operations. Built with modern web technologies, featuring inventory management, sales tracking, customer database, and reporting capabilities.',
+      link: 'https://github.com/Thippharake-NaChiengmai/DevOps-zerotohero-1'
     },
     {
-      image: '/images/eng4.png',
-      title: 'English in Science and Technology Project 1',
-      description: 'This project about creating new innovation'
+      image: '/images/AI.jpg',
+      title: 'AI Chat Bot',
+      description: 'An intelligent conversational AI chatbot developed using natural language processing techniques. Capable of understanding user queries, providing relevant responses, and learning from interactions to improve accuracy over time.',
+      link: 'https://aigenfootball.vercel.app/'
     }
   ];
 
@@ -34,23 +38,43 @@ export default function Portfolio() {
     setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + portfolioProjects.length) % portfolioProjects.length);
   };
 
-  const { image, title, description } = portfolioProjects[currentProjectIndex];
+  const { image, title, description, link } = portfolioProjects[currentProjectIndex];
     return (
         <section id="portfolio" className="bg-white p-4 rounded shadow-sm mb-4">
             <h2 className="h3 fw-bold mb-3">Portfolio</h2>
-
-            <div className="card h-100">
-              <img
-                src={image}
-                alt={title}
-                className="card-img-top img-fluid"
-                style={{ height: 'auto', objectFit: 'cover' }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
-              </div>
+            
+            <div className="alert alert-info mb-3" role="alert">
+              <i className="bi bi-info-circle me-2"></i>
+              <strong>Note:</strong> The deployed projects shown below are older versions. For the latest code and features, please check the GitHub repositories.
             </div>
+
+                         <a href={link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+               <div className="card h-100 hover-shadow" style={{ cursor: 'pointer', transition: 'transform 0.2s' }}>
+                 <img
+                   src={image}
+                   alt={title}
+                   className="card-img-top img-fluid"
+                   style={{ height: 'auto', objectFit: 'cover' }}
+                 />
+                 <div className="card-body">
+                   <h5 className="card-title text-dark">{title}</h5>
+                   <p className="card-text text-muted">{description}</p>
+                   {title === 'AI Chat Bot' && (
+                     <div className="mt-3">
+                       <a 
+                         href="https://github.com/ChindanaiNaKub/aigenfootball/tree/bug" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="btn btn-outline-primary btn-sm"
+                       >
+                         <i className="bi bi-github me-1"></i>
+                         Check GitHub Repository
+                       </a>
+                     </div>
+                   )}
+                 </div>
+               </div>
+             </a>
 
             <div className="d-flex justify-content-between mt-4">
               <button className="btn btn-success" onClick={prevProject}>

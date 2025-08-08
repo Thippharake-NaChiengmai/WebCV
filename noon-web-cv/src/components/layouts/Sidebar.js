@@ -4,7 +4,7 @@ export default function Sidebar() {
           {/* Profile Image */}
           <div className="text-center mb-4">
             <img
-              src="/images/my2.jpg"
+              src="/images/WebCv_img.JPG"
               alt="Profile"
               className="rounded-circle border border-4 border-white mb-3"
               style={{ width: '180px', height: '180px', objectFit: 'cover' }}

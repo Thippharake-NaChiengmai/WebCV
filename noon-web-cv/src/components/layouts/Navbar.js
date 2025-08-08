@@ -1,12 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 const Navbar = () => {
-  const sections = ['Intro', 'Contact', 'Experience', 'Education', 'Skills', 'Hobby', 'Portfolio'];
+  const sections = ['Intro', 'Contact', 'Experience', 'Education', 'Skills', 'Portfolio'];
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white py-3">
       <div className="container-fluid">
-        <span className="navbar-brand mb-0 h1">Noon Web CV</span>
+        <span className="navbar-brand mb-0 h1">Web CV</span>
         <button
           className="navbar-toggler"
           type="button"

@@ -43,10 +43,12 @@ export default function Portfolio() {
         <section id="portfolio" className="bg-white p-4 rounded shadow-sm mb-4">
             <h2 className="h3 fw-bold mb-3">Portfolio</h2>
             
-            <div className="alert alert-info mb-3" role="alert">
-              <i className="bi bi-info-circle me-2"></i>
-              <strong>Note:</strong> The deployed projects shown below are older versions. For the latest code and features, please check the GitHub repositories.
-            </div>
+            {title === 'AI Chat Bot' && (
+              <div className="alert alert-info mb-3" role="alert">
+                <i className="bi bi-info-circle me-2"></i>
+                <strong>Note:</strong> The deployed projects shown below are older versions. For the latest code and features, please check the GitHub repositories.
+              </div>
+            )}
 
                          <a href={link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                <div className="card h-100 hover-shadow" style={{ cursor: 'pointer', transition: 'transform 0.2s' }}>

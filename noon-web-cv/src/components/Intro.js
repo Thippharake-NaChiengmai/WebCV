@@ -24,7 +24,17 @@ export default function Intro() {
                 onClick={() => setShowFullIntro(!showFullIntro)}
                 className="btn btn-link text-success"
             >
-                {showFullIntro ? 'Show Less' : 'Show More'}
+                {showFullIntro ? (
+                    <>
+                        <i className="bi bi-chevron-up me-1"></i>
+                        Show Less
+                    </>
+                ) : (
+                    <>
+                        <i className="bi bi-chevron-down me-1"></i>
+                        Show More
+                    </>
+                )}
             </button>
         </section>
 

@@ -92,6 +92,12 @@ export default function Sidebar() {
                  className="text-white text-decoration-none fs-4 hover-scale">
                 <i className="bi bi-envelope"></i>
               </a>
+              <a href="https://line.me/ti/p/~37299271" target="_blank" rel="noopener noreferrer" 
+                 className="text-white text-decoration-none fs-4 hover-scale">
+                <img src="https://icons.iconarchive.com/icons/bootstrap/bootstrap/128/Bootstrap-line-icon.png" 
+                     alt="Line" 
+                     style={{ width: '24px', height: '24px', filter: 'brightness(0) invert(1)' }} />
+              </a>
               <a href="tel:+0614825222" 
                  className="text-white text-decoration-none fs-4 hover-scale">
                 <i className="bi bi-telephone"></i>

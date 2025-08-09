@@ -19,7 +19,7 @@ export default function Portfolio() {
     {
       image: '/images/CJ.png',
       title: 'CJ Streetware Store',
-      description: 'A comprehensive database management system for streetwear retail operations. Built with modern web technologies, featuring inventory management, sales tracking, customer database, and reporting capabilities.',
+      description: 'A full-stack web application for streetwear retail management built with React, Node.js, and MongoDB. Features include real-time inventory tracking, automated sales analytics, customer relationship management, and comprehensive reporting dashboards with data visualization.',
       link: 'https://github.com/Thippharake-NaChiengmai/DevOps-zerotohero-1'
     },
     {

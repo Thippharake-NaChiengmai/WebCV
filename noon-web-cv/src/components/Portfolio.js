@@ -26,7 +26,7 @@ export default function Portfolio() {
       image: '/images/AI.jpg',
       title: 'AI Chat Bot',
       description: 'An intelligent conversational AI chatbot developed using natural language processing techniques. Capable of understanding user queries, providing relevant responses, and learning from interactions to improve accuracy over time.',
-      link: 'https://aigenfootball.vercel.app/'
+      link: 'https://aigenfootball-noon.vercel.app/'
     }
   ];
 
@@ -42,13 +42,6 @@ export default function Portfolio() {
     return (
         <section id="portfolio" className="bg-white p-4 rounded shadow-sm mb-4">
             <h2 className="h3 fw-bold mb-3">Portfolio</h2>
-            
-            {title === 'AI Chat Bot' && (
-              <div className="alert alert-info mb-3" role="alert">
-                <i className="bi bi-info-circle me-2"></i>
-                <strong>Note:</strong> The deployed projects shown below are older versions. For the latest code and features, please check the GitHub repositories.
-              </div>
-            )}
 
                          <a href={link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                <div className="card h-100 hover-shadow" style={{ cursor: 'pointer', transition: 'transform 0.2s' }}>
@@ -61,19 +54,6 @@ export default function Portfolio() {
                  <div className="card-body">
                    <h5 className="card-title text-dark">{title}</h5>
                    <p className="card-text text-muted">{description}</p>
-                   {title === 'AI Chat Bot' && (
-                     <div className="mt-3">
-                       <a 
-                         href="https://github.com/ChindanaiNaKub/aigenfootball/tree/bug" 
-                         target="_blank" 
-                         rel="noopener noreferrer"
-                         className="btn btn-outline-primary btn-sm"
-                       >
-                         <i className="bi bi-github me-1"></i>
-                         Check GitHub Repository
-                       </a>
-                     </div>
-                   )}
                  </div>
                </div>
              </a>

@@ -18,7 +18,7 @@ export default function Portfolio() {
     },
     {
       image: '/images/CJ.png',
-      title: 'CJ Streetware Database System',
+      title: 'CJ Streetware Store',
       description: 'A comprehensive database management system for streetwear retail operations. Built with modern web technologies, featuring inventory management, sales tracking, customer database, and reporting capabilities.',
       link: 'https://github.com/Thippharake-NaChiengmai/DevOps-zerotohero-1'
     },

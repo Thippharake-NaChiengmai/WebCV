@@ -13,7 +13,7 @@ export default function Intro() {
                     </div>
                 </div>
                 <div>
-                    <h2 className="h3 fw-bold mb-1 text-primary">Personal Introduction</h2>
+                    <h2 className="h3 fw-bold mb-1 text-primary">Introduction</h2>
                 </div>
             </div>
             

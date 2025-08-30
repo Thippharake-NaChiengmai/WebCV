@@ -27,6 +27,12 @@ export default function Portfolio() {
       title: 'AI Chat Bot',
       description: 'An intelligent conversational AI chatbot developed using natural language processing techniques. Capable of understanding user queries, providing relevant responses, and learning from interactions to improve accuracy over time.',
       link: 'https://aigenfootball-noon.vercel.app/'
+    },
+    {
+      image: '/images/anti-fakenews.jpg',
+      title: 'Real or Fa-Ke anti-fake news system',
+      description: 'A web-based system designed to detect and prevent the spread of fake news. Utilizes machine learning and natural language processing to analyze news articles, identify misinformation, and provide users with real-time credibility assessments. Features include user-friendly reporting tools, educational resources, and interactive dashboards for tracking news authenticity.',
+      link: 'https://project-01-the-anti-fake-news-syste-three.vercel.app/'
     }
   ];
 
@@ -41,9 +47,19 @@ export default function Portfolio() {
   const { image, title, description, link } = portfolioProjects[currentProjectIndex];
     return (
         <section id="portfolio" className="bg-white p-4 rounded shadow-sm mb-4">
-            <h2 className="h3 fw-bold mb-3">Portfolio</h2>
+            <div className="d-flex align-items-center mb-4">
+              <div className="me-3">
+                <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center" 
+                     style={{ width: '60px', height: '60px' }}>
+                  <i className="bi bi-briefcase text-white fs-4"></i>
+                </div>
+              </div>
+              <div>
+                <h2 className="h3 fw-bold mb-1 text-primary">Portfolio</h2>
+              </div>
+            </div>
 
-                         <a href={link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+            <a href={link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
                <div className="card h-100 hover-shadow" style={{ cursor: 'pointer', transition: 'transform 0.2s' }}>
                  <img
                    src={image}

@@ -1,27 +1,76 @@
+import React, { useState, useEffect } from "react";
+
 const Navbar = () => {
   const sections = ['Intro', 'Contact', 'Experience', 'Education', 'Skills', 'Portfolio'];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Listen for Bootstrap collapse events to sync state
+  useEffect(() => {
+    const navbarNav = document.getElementById('navbarNav');
+    
+    const handleShow = () => setIsMenuOpen(true);
+    const handleHide = () => setIsMenuOpen(false);
+    
+    if (navbarNav) {
+      navbarNav.addEventListener('show.bs.collapse', handleShow);
+      navbarNav.addEventListener('hide.bs.collapse', handleHide);
+      
+      // Cleanup event listeners
+      return () => {
+        navbarNav.removeEventListener('show.bs.collapse', handleShow);
+        navbarNav.removeEventListener('hide.bs.collapse', handleHide);
+      };
+    }
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white py-3">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
       <div className="container-fluid">
-        <span className="navbar-brand mb-0 h1">Web CV</span>
+        <div className="navbar-brand d-flex align-items-center mb-0">
+          <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3"
+               style={{ width: '45px', height: '45px' }}>
+            <i className="bi bi-code-square text-white fs-4"></i>
+          </div>
+          <div>
+            <h1 className="h4 fw-bold mb-0 text-primary">MY-Web CV</h1>
+            <small className="text-muted d-block" style={{ fontSize: '0.75rem', lineHeight: '1' }}>
+              Portfolio & Resume
+            </small>
+          </div>
+        </div>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
+          onClick={toggleMenu}
         >
-          <span className="navbar-toggler-icon"></span>
+          {isMenuOpen ? (
+            <i className="bi bi-x-lg fs-4"></i>
+          ) : (
+            <i className="bi bi-list fs-4"></i>
+          )}
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {sections.map(section => (
               <li className="nav-item" key={section}>
-                <a href={`#${section.toLowerCase()}`} className="nav-link text-white mx-2 hover:text-success">
+                <a 
+                  href={`#${section.toLowerCase()}`} 
+                  className="nav-link text-dark mx-2 fw-medium position-relative"
+                  style={{ transition: 'color 0.3s ease' }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {section}
+                  <span className="position-absolute bottom-0 start-0 w-0 h-2 bg-primary transition-all duration-300" 
+                        style={{ transition: 'width 0.3s ease' }}></span>
                 </a>
               </li>
             ))}

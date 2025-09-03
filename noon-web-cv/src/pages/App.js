@@ -2,7 +2,9 @@ import React, { useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'nprogress/nprogress.css';
 import './App.css';
+import useNavigationProgress from '../hooks/useNavigationProgress.ts';
 import Navbar from '../components/layouts/Navbar';  
 import Footer from '../components/layouts/Footer';
 import Sidebar from '../components/layouts/Sidebar';
@@ -52,6 +54,8 @@ const Home = () => {
 };
 
 const NoonWebCV = () => {
+  // Use navigation progress hook
+  useNavigationProgress();
 
   // ✅ Fade-in effect เมื่อโหลดหน้าเว็บ
   useEffect(() => {

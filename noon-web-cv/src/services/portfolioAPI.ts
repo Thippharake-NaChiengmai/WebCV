@@ -1,4 +1,5 @@
 // Mock API service for Portfolio data
+import NProgress from 'nprogress';
 import { 
   Project, 
   ProjectSummary, 
@@ -12,9 +13,16 @@ import portfolioData from '../data/portfolioProjects.json';
 // Simulate API delay for realistic behavior
 const API_DELAY = 500; // milliseconds
 
-// Helper function to simulate network delay
-const delay = (ms: number): Promise<void> => 
-  new Promise(resolve => setTimeout(resolve, ms));
+// Helper function to simulate network delay with progress
+const delay = (ms: number): Promise<void> => {
+  NProgress.start();
+  return new Promise(resolve => {
+    setTimeout(() => {
+      NProgress.done();
+      resolve();
+    }, ms);
+  });
+};
 
 // Helper function to create API response
 const createResponse = <T>(data: T, message?: string): APIResponse<T> => ({

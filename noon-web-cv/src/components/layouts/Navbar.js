@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const sections = ['Intro', 'Contact', 'Experience', 'Education', 'Skills', 'Portfolio'];
+  const sections = [
+    { name: 'Home', path: '/' },
+    { name: 'Activities', path: '/activities' }
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Listen for Bootstrap collapse events to sync state
   useEffect(() => {
@@ -61,17 +66,23 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {sections.map(section => (
-              <li className="nav-item" key={section}>
-                <a 
-                  href={`#${section.toLowerCase()}`} 
-                  className="nav-link text-dark mx-2 fw-medium position-relative"
+              <li className="nav-item" key={section.name}>
+                <Link 
+                  to={section.path}
+                  className={`nav-link mx-2 fw-medium position-relative ${
+                    location.pathname === section.path ? 'text-primary' : 'text-dark'
+                  }`}
                   style={{ transition: 'color 0.3s ease' }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {section}
-                  <span className="position-absolute bottom-0 start-0 w-0 h-2 bg-primary transition-all duration-300" 
-                        style={{ transition: 'width 0.3s ease' }}></span>
-                </a>
+                  {section.name}
+                  <span 
+                    className={`position-absolute bottom-0 start-0 h-2 bg-primary transition-all duration-300 ${
+                      location.pathname === section.path ? 'w-100' : 'w-0'
+                    }`} 
+                    style={{ transition: 'width 0.3s ease' }}
+                  ></span>
+                </Link>
               </li>
             ))}
           </ul>

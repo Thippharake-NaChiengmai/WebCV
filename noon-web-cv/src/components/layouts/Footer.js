@@ -80,11 +80,6 @@ const Footer = () => {
                                 &copy; {currentYear} Thippharake Na Chiengmai. All rights reserved.
                             </p>
                         </div>
-                        <div className="col-md-6 text-md-end">
-                            <p className="text-muted mb-0 small">
-                                Built with <i className="bi bi-heart-fill text-danger"></i> using React & Bootstrap
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>

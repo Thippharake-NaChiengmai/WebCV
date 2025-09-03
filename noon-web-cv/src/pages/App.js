@@ -1,4 +1,5 @@
 import React, { useEffect} from 'react';
+import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
@@ -10,15 +11,12 @@ import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Education from '../components/Education';
 import Intro from '../components/Intro';
-import Portfolio from '../components/Portfolio';
 
-const NoonWebCV = () => {
+import Activities from './Activities';
+import Details from './Details.tsx';
 
-  // ✅ Fade-in effect เมื่อโหลดหน้าเว็บ
-  useEffect(() => {
-    document.body.classList.add("fade-in");
-  }, []);
-
+// Home component for the main page
+const Home = () => {
   return (
     <div className="min-vh-100 bg-light">
       {/* Navigation */}
@@ -42,9 +40,6 @@ const NoonWebCV = () => {
           {/* Skills Section */}
           <Skills />
 
-          {/* Portfolio Section */}
-          <Portfolio />
-
           {/* Contact Section */}
           <Contact />
         </div>
@@ -53,6 +48,22 @@ const NoonWebCV = () => {
       {/* Footer */}
       <Footer />
     </div>
+  );
+};
+
+const NoonWebCV = () => {
+
+  // ✅ Fade-in effect เมื่อโหลดหน้าเว็บ
+  useEffect(() => {
+    document.body.classList.add("fade-in");
+  }, []);
+
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/activities" element={<Activities />} />
+      <Route path="/details/:projectId" element={<Details />} />
+    </Routes>
   );
 };
 

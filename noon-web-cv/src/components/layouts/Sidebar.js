@@ -13,10 +13,10 @@ export default function Sidebar() {
           <div className="text-center mb-4 sidebar-profile">
             <div className="position-relative mb-3">
               <img
-                src="/images/WebCv_img.JPG"
+                src="/images/cvImg.png"
                 alt="Profile"
                 className="rounded-circle border border-4 border-white"
-                style={{ width: '180px', height: '180px', objectFit: 'cover' }}
+                style={{ width: '180px', height: '180px', objectFit: 'cover', objectPosition: 'top' }}
               />
             </div>
             <h2 className="h4 fw-bold mb-2">Thippharake Na Chiengmai</h2>

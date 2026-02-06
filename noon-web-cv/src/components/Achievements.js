@@ -15,13 +15,13 @@ const Achievements = () => {
             <p className="text-muted mb-4">
               Here are some of my notable activities, achievements, and extracurricular involvement.
             </p>
-            
+
             {/* Activity Timeline */}
             <div className="timeline">
               <div className="timeline-item mb-4">
                 <div className="d-flex">
                   <div className="flex-shrink-0">
-                    <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center" 
+                    <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center"
                          style={{ width: '40px', height: '40px' }}>
                       <i className="bi bi-trophy text-white"></i>
                     </div>
@@ -37,7 +37,7 @@ const Achievements = () => {
               <div className="timeline-item mb-4">
                 <div className="d-flex">
                   <div className="flex-shrink-0">
-                    <div className="bg-success rounded-circle d-flex align-items-center justify-content-center" 
+                    <div className="bg-success rounded-circle d-flex align-items-center justify-content-center"
                          style={{ width: '40px', height: '40px' }}>
                       <i className="bi bi-people text-white"></i>
                     </div>
@@ -53,7 +53,7 @@ const Achievements = () => {
               <div className="timeline-item mb-4">
                 <div className="d-flex">
                   <div className="flex-shrink-0">
-                    <div className="bg-info rounded-circle d-flex align-items-center justify-content-center" 
+                    <div className="bg-info rounded-circle d-flex align-items-center justify-content-center"
                          style={{ width: '40px', height: '40px' }}>
                       <i className="bi bi-code-slash text-white"></i>
                     </div>
@@ -69,7 +69,7 @@ const Achievements = () => {
               <div className="timeline-item mb-4">
                 <div className="d-flex">
                   <div className="flex-shrink-0">
-                    <div className="bg-warning rounded-circle d-flex align-items-center justify-content-center" 
+                    <div className="bg-warning rounded-circle d-flex align-items-center justify-content-center"
                          style={{ width: '40px', height: '40px' }}>
                       <i className="bi bi-heart text-white"></i>
                     </div>

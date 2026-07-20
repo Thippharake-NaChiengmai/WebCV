@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { appConfig } from '../config/app';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,10 +20,9 @@ export default function Contact() {
     event.preventDefault();
 
     const { name, email, message } = formData;
-    const myEmail = 'thippharake_na@cmu.ac.th';
     const subject = `Message from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${appConfig.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoLink;
 

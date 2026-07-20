@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { appConfig } from '../../config/app';
 
 export default function Sidebar() {
     const [showFullSidebar, setShowFullSidebar] = useState(false); // false = show less by default
@@ -134,13 +135,13 @@ export default function Sidebar() {
               <i className="bi bi-link me-2" style={{ fontSize: '1.5rem' }}></i>Connect With Me
             </h6>
             <div className="d-flex justify-content-center gap-3 mb-3">
-              <a href="https://github.com/quentinx27" target="_blank" rel="noopener noreferrer" 
+              <a href={appConfig.githubUrl} target="_blank" rel="noopener noreferrer" 
                  className="social-icon-link" title="GitHub">
                 <div className="social-icon-wrapper">
                   <i className="bi bi-github" style={{ fontSize: '1.8rem' }}></i>
                 </div>
               </a>
-              <a href="mailto:thippharake_na@cmu.ac.th" 
+              <a href={`mailto:${appConfig.contactEmail}`} 
                  className="social-icon-link" title="Email">
                 <div className="social-icon-wrapper">
                   <i className="bi bi-envelope" style={{ fontSize: '1.8rem' }}></i>

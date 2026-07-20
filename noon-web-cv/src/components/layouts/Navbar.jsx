@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -8,29 +8,6 @@ const Navbar = () => {
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  // Listen for Bootstrap collapse events to sync state
-  useEffect(() => {
-    const navbarNav = document.getElementById('navbarNav');
-    
-    const handleShow = () => setIsMenuOpen(true);
-    const handleHide = () => setIsMenuOpen(false);
-    
-    if (navbarNav) {
-      navbarNav.addEventListener('show.bs.collapse', handleShow);
-      navbarNav.addEventListener('hide.bs.collapse', handleHide);
-      
-      // Cleanup event listeners
-      return () => {
-        navbarNav.removeEventListener('show.bs.collapse', handleShow);
-        navbarNav.removeEventListener('hide.bs.collapse', handleHide);
-      };
-    }
-  }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
@@ -50,12 +27,10 @@ const Navbar = () => {
         <button
           className="navbar-toggler border-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
-          onClick={toggleMenu}
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
         >
           {isMenuOpen ? (
             <i className="bi bi-x-lg fs-4"></i>
@@ -63,7 +38,7 @@ const Navbar = () => {
             <i className="bi bi-list fs-4"></i>
           )}
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {sections.map(section => (
               <li className="nav-item" key={section.name}>

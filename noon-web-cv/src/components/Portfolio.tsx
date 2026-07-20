@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Project } from "../types/portfolio.ts";
-import PortfolioAPI from "../services/portfolioAPI.ts";
+import type { Project } from '../types/portfolio';
+import PortfolioAPI from '../services/portfolioAPI';
 
 const Portfolio: React.FC = () => {
   // State for projects and loading

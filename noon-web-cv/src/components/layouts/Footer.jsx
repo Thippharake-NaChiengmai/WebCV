@@ -1,4 +1,5 @@
 import React from "react";
+import { appConfig } from '../../config/app';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -50,7 +51,9 @@ const Footer = () => {
                             </li>
                             <li className="mb-2 d-flex align-items-center">
                                 <i className="bi bi-envelope text-primary me-2"></i>
-                                <span className="text-muted">thippharake_na@cmu.ac.th</span>
+                                <a className="text-muted text-decoration-none" href={`mailto:${appConfig.contactEmail}`}>
+                                    {appConfig.contactEmail}
+                                </a>
                             </li>
                             <li className="mb-2 d-flex align-items-center">
                                 <i className="bi bi-building text-primary me-2"></i>

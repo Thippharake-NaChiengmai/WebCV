@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Navbar from '../components/layouts/Navbar';
-import Footer from '../components/layouts/Footer';
-import Sidebar from '../components/layouts/Sidebar';
-import { Project } from '../types/portfolio.ts';
-import PortfolioAPI from '../services/portfolioAPI.ts';
+import type { Project } from '../types/portfolio';
+import PortfolioAPI from '../services/portfolioAPI';
 
 const Details: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -56,22 +51,11 @@ const Details: React.FC = () => {
   // Loading state
   if (loading) {
     return (
-      <div className="min-vh-100 bg-light">
-        <Navbar />
-        <div className="row g-0">
-          <Sidebar />
-          <div className="col-12 col-md-9 p-4">
-            <div className="container-fluid">
-              <div className="text-center mt-5">
-                <div className="spinner-border text-primary" role="status" style={{ width: '3rem', height: '3rem' }}>
-                  <span className="visually-hidden">Loading...</span>
-                </div>
-                <p className="mt-3 text-muted">Loading project details...</p>
-              </div>
-            </div>
-          </div>
+      <div className="container-fluid text-center mt-5">
+        <div className="spinner-border text-primary" role="status" style={{ width: '3rem', height: '3rem' }}>
+          <span className="visually-hidden">Loading...</span>
         </div>
-        <Footer />
+        <p className="mt-3 text-muted">Loading project details...</p>
       </div>
     );
   }
@@ -79,26 +63,15 @@ const Details: React.FC = () => {
   // Error state
   if (error || !project) {
     return (
-      <div className="min-vh-100 bg-light">
-        <Navbar />
-        <div className="row g-0">
-          <Sidebar />
-          <div className="col-12 col-md-9 p-4">
-            <div className="container-fluid">
-              <div className="text-center mt-5">
-                <div className="alert alert-danger" role="alert">
-                  <i className="bi bi-exclamation-triangle me-2"></i>
-                  {error || 'Project not found'}
-                </div>
-                <Link to="/activities" className="btn btn-primary">
-                  <i className="bi bi-arrow-left me-2"></i>
-                  Back to Activities
-                </Link>
-              </div>
-            </div>
-          </div>
+      <div className="container-fluid text-center mt-5">
+        <div className="alert alert-danger" role="alert">
+          <i className="bi bi-exclamation-triangle me-2"></i>
+          {error || 'Project not found'}
         </div>
-        <Footer />
+        <Link to="/activities" className="btn btn-primary">
+          <i className="bi bi-arrow-left me-2"></i>
+          Back to Activities
+        </Link>
       </div>
     );
   }
@@ -106,17 +79,7 @@ const Details: React.FC = () => {
 
 
   return (
-    <div className="min-vh-100 bg-light">
-      {/* Navigation */}
-      <Navbar />
-
-      <div className="row g-0">
-        {/* Sidebar */}
-        <Sidebar />
-
-        {/* Main Content */}
-        <div className="col-12 col-md-9 p-4">
-          <div className="container-fluid">
+    <div className="container-fluid">
             {/* Back Button */}
             <div className="mb-4">
               <Link to="/activities" className="btn btn-outline-primary">
@@ -279,12 +242,6 @@ const Details: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 // Mock API service for Portfolio data
-import NProgress from 'nprogress';
 import { 
   Project, 
   ProjectSummary, 
@@ -9,20 +8,6 @@ import {
   ProjectCategory 
 } from '../types/portfolio';
 import portfolioData from '../data/portfolioProjects.json';
-
-// Simulate API delay for realistic behavior
-const API_DELAY = 500; // milliseconds
-
-// Helper function to simulate network delay with progress
-const delay = (ms: number): Promise<void> => {
-  NProgress.start();
-  return new Promise(resolve => {
-    setTimeout(() => {
-      NProgress.done();
-      resolve();
-    }, ms);
-  });
-};
 
 // Helper function to create API response
 const createResponse = <T>(data: T, message?: string): APIResponse<T> => ({
@@ -63,8 +48,6 @@ export class PortfolioAPI {
    * Get all projects with optional pagination
    */
   static async getAllProjects(params?: PaginationParams): Promise<PaginatedResponse<Project>> {
-    await delay(API_DELAY);
-    
     try {
       const allProjects = this.projects;
       
@@ -97,8 +80,6 @@ export class PortfolioAPI {
    * Get project by ID
    */
   static async getProjectById(id: number): Promise<APIResponse<Project | null>> {
-    await delay(API_DELAY);
-    
     try {
       const project = this.projects.find(p => p.id === id);
       
@@ -121,8 +102,6 @@ export class PortfolioAPI {
    * Get projects by category
    */
   static async getProjectsByCategory(category: ProjectCategory): Promise<APIResponse<Project[]>> {
-    await delay(API_DELAY);
-    
     try {
       const filteredProjects = this.projects.filter(p => p.category === category);
       
@@ -139,8 +118,6 @@ export class PortfolioAPI {
    * Get project summaries (lightweight version for listings)
    */
   static async getProjectSummaries(): Promise<APIResponse<ProjectSummary[]>> {
-    await delay(API_DELAY);
-    
     try {
       const summaries: ProjectSummary[] = this.projects.map(project => ({
         id: project.id,
@@ -161,8 +138,6 @@ export class PortfolioAPI {
    * Search projects by title or description
    */
   static async searchProjects(query: string): Promise<APIResponse<Project[]>> {
-    await delay(API_DELAY);
-    
     try {
       const lowercaseQuery = query.toLowerCase();
       const matchingProjects = this.projects.filter(project => 
@@ -184,8 +159,6 @@ export class PortfolioAPI {
    * Get projects by technology
    */
   static async getProjectsByTechnology(technology: string): Promise<APIResponse<Project[]>> {
-    await delay(API_DELAY);
-    
     try {
       const matchingProjects = this.projects.filter(project =>
         project.technologies.some(tech => 
@@ -206,8 +179,6 @@ export class PortfolioAPI {
    * Get all unique technologies
    */
   static async getAllTechnologies(): Promise<APIResponse<string[]>> {
-    await delay(API_DELAY);
-    
     try {
       const allTechnologies = this.projects.reduce((acc: string[], project) => {
         project.technologies.forEach(tech => {
@@ -231,8 +202,6 @@ export class PortfolioAPI {
    * Get all project categories
    */
   static async getAllCategories(): Promise<APIResponse<ProjectCategory[]>> {
-    await delay(API_DELAY);
-    
     try {
       const categories = portfolioData.metadata.categories as ProjectCategory[];
       return createResponse(categories, `Retrieved ${categories.length} categories`);
@@ -245,8 +214,6 @@ export class PortfolioAPI {
    * Get related projects (excluding the current project)
    */
   static async getRelatedProjects(projectId: number, limit: number = 3): Promise<APIResponse<Project[]>> {
-    await delay(API_DELAY);
-    
     try {
       const currentProject = this.projects.find(p => p.id === projectId);
       if (!currentProject) {
@@ -295,8 +262,6 @@ export class PortfolioAPI {
     totalTechnologies: number;
     categoriesCount: Record<string, number>;
   }>> {
-    await delay(API_DELAY);
-    
     try {
       const stats = {
         totalProjects: this.projects.length,

@@ -146,6 +146,32 @@ main section hr { margin: 1.5rem 0; border-color: var(--line); opacity: 1; }
 .project-link-github { background: #24292f !important; border-color: #24292f !important; color: #fff !important; }
 .project-link-youtube { background: #dc2626 !important; border-color: #dc2626 !important; color: #fff !important; }
 .project-link-youtube.disabled { opacity: .5; cursor: not-allowed; }
+.project-link-figma { background: #171717 !important; border-color: #171717 !important; color: #fff !important; }
+.project-link-figma.disabled { opacity: .5; cursor: not-allowed; }
+.figma-logo { width: 14px; height: 21px; object-fit: contain; vertical-align: -5px; }
+
+.image-zoom-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+  cursor: zoom-in;
+}
+.image-zoom-trigger img { display: block; width: 100%; transition: opacity .2s ease, transform .2s ease; }
+.image-zoom-trigger:hover img { opacity: .8; transform: scale(1.015); }
+.image-zoom-trigger span { position: absolute; right: .7rem; bottom: .7rem; border-radius: 6px; padding: .28rem .55rem; color: #fff; background: rgba(15, 23, 42, .8); font-size: .75rem; font-weight: 600; }
+.image-zoom-trigger--award { width: auto; max-width: 100%; }
+.image-lightbox { align-items: center; background: rgba(4, 11, 23, .88); display: flex; inset: 0; justify-content: center; padding: 1.5rem; position: fixed; z-index: 2000; }
+.image-lightbox__content { max-height: 100%; max-width: min(1100px, 100%); position: relative; }
+.image-lightbox__content img { display: block; max-height: calc(100vh - 4rem); max-width: 100%; object-fit: contain; }
+.image-lightbox__content p { color: #fff; font-size: .875rem; margin: .75rem 0 0; text-align: center; }
+.image-lightbox__close { align-items: center; background: #fff; border: 0; border-radius: 50%; color: #0f172a; display: flex; height: 2.4rem; justify-content: center; position: absolute; right: -.75rem; top: -.75rem; width: 2.4rem; z-index: 1; }
+.project-link-download { background: var(--teal) !important; border-color: var(--teal) !important; color: #fff !important; }
+.project-link-download.disabled { opacity: .5; cursor: not-allowed; }
 .badge { border-radius: 6px; font-weight: 600; }
 .badge.bg-primary { background: #eaf1ff !important; color: #2459b6 !important; }
 .badge.bg-secondary { background: #eef2f7 !important; color: var(--ink-soft) !important; }

@@ -1,9 +1,20 @@
-import { Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../components/layouts/Footer';
 import Navbar from '../components/layouts/Navbar';
 import Sidebar from '../components/layouts/Sidebar';
 
 export default function AppLayout() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const frameId = requestAnimationFrame(() => {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return () => cancelAnimationFrame(frameId);
+  }, [location.hash, location.pathname]);
+
   return (
     <div className="min-vh-100 bg-light d-flex flex-column">
       <Navbar />

@@ -121,7 +121,7 @@ export class PortfolioAPI {
     try {
       const summaries: ProjectSummary[] = this.projects.map(project => ({
         id: project.id,
-        image: project.image,
+        images: project.images,
         title: project.title,
         description: project.description,
         technologies: project.technologies,

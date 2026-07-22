@@ -1,5 +1,5 @@
 const fallbackContactEmail = 'thippharake_na@cmu.ac.th';
-const fallbackGithubUrl = 'https://github.com/quentinx27';
+const fallbackGithubUrl = 'https://github.com/Thippharake-NaChiengmai';
 
 export const appConfig = {
   contactEmail: import.meta.env.VITE_CONTACT_EMAIL || fallbackContactEmail,

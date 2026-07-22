@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const sections = [
     { name: 'Home', path: '/' },
-    { name: 'Activities', path: '/activities' }
+    { name: 'Projects & Awards', path: '/activities' }
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -18,9 +18,9 @@ const Navbar = () => {
             <i className="bi bi-code-square text-white fs-4"></i>
           </div>
           <div>
-            <h1 className="h4 fw-bold mb-0 text-primary">MY-Web CV</h1>
+            <h1 className="h4 fw-bold mb-0 text-primary">Thippharake Na Chiengmai</h1>
             <small className="text-muted d-block" style={{ fontSize: '0.75rem', lineHeight: '1' }}>
-              Portfolio & Resume
+              Software Engineering Portfolio
             </small>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { appConfig } from '../../config/app';
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
                             <h5 className="mb-0 fw-bold">Thippharake Na Chiengmai</h5>
                         </div>
                         <p className="text-muted mb-3">
-                            Software Engineering Student passionate about creating innovative solutions and learning new technologies.
+                            Software Engineering intern focused on scalable, end-to-end software solutions.
                         </p>
                     </div>
 
@@ -27,16 +28,16 @@ const Footer = () => {
                         <h6 className="fw-semibold mb-3 text-dark">Quick Links</h6>
                         <ul className="list-unstyled">
                             <li className="mb-2">
-                                <a href="#intro" className="text-decoration-none text-muted">About</a>
+                                <Link to="/#intro" className="text-decoration-none text-muted">About</Link>
                             </li>
                             <li className="mb-2">
-                                <a href="#portfolio" className="text-decoration-none text-muted">Portfolio</a>
+                                <Link to="/activities#portfolio" className="text-decoration-none text-muted">Portfolio</Link>
                             </li>
                             <li className="mb-2">
-                                <a href="#skills" className="text-decoration-none text-muted">Skills</a>
+                                <Link to="/#skills" className="text-decoration-none text-muted">Skills</Link>
                             </li>
                             <li className="mb-2">
-                                <a href="#contact" className="text-decoration-none text-muted">Contact</a>
+                                <Link to="/#contact" className="text-decoration-none text-muted">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -57,21 +58,18 @@ const Footer = () => {
                             </li>
                             <li className="mb-2 d-flex align-items-center">
                                 <i className="bi bi-building text-primary me-2"></i>
-                                <span className="text-muted">CAMT, CMU</span>
+                                <span className="text-muted">CAMT, Chiang Mai University</span>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Newsletter/Download */}
+                    {/* Contact */}
                     <div className="col-lg-3 col-md-6">
-                        <h6 className="fw-semibold mb-3 text-dark">Get My CV</h6>
+                        <h6 className="fw-semibold mb-3 text-dark">Get in Touch</h6>
                         <p className="text-muted small mb-3">
-                            Download my resume for detailed information about my experience and skills.
+                            Contact me for more information about my experience and projects.
                         </p>
-                        <button className="btn btn-outline-primary btn-sm w-100">
-                            <i className="bi bi-download me-2"></i>
-                            Download CV
-                        </button>
+                        <a href={`mailto:${appConfig.contactEmail}`} className="btn btn-outline-primary btn-sm w-100"><i className="bi bi-envelope me-2"></i>Email Me</a>
                     </div>
                 </div>
 

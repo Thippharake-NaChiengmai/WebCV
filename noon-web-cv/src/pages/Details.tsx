@@ -1,249 +1,27 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import type { Project } from '../types/portfolio';
 import PortfolioAPI from '../services/portfolioAPI';
 
-const Details: React.FC = () => {
+const Details = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  
-  // State management
   const [project, setProject] = useState<Project | null>(null);
   const [relatedProjects, setRelatedProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [activeImage, setActiveImage] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch project data
-  useEffect(() => {
-    const fetchProjectData = async () => {
-      if (!projectId) {
-        setError('No project ID provided');
-        setLoading(false);
-        return;
-      }
+  useEffect(() => { if (!projectId) return; PortfolioAPI.getProjectById(Number(projectId)).then(response => { if (!response.data) throw new Error(response.message); setProject(response.data); setActiveImage(0); return PortfolioAPI.getRelatedProjects(Number(projectId)); }).then(response => setRelatedProjects(response.data)).catch(error => setError(error.message)); }, [projectId]);
+  if (error) return <div className="alert alert-danger">{error}</div>;
+  if (!project) return <div className="text-center py-5"><div className="spinner-border text-primary" /></div>;
+  const selectedImage = project.images[activeImage];
 
-      try {
-        setLoading(true);
-        setError(null);
-        
-        const projectResponse = await PortfolioAPI.getProjectById(parseInt(projectId));
-        
-        if (projectResponse.status === 'success' && projectResponse.data) {
-          setProject(projectResponse.data);
-          
-          // Fetch related projects
-          const relatedResponse = await PortfolioAPI.getRelatedProjects(parseInt(projectId), 3);
-          if (relatedResponse.status === 'success') {
-            setRelatedProjects(relatedResponse.data);
-          }
-        } else {
-          setError(projectResponse.message || 'Project not found');
-        }
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load project details');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjectData();
-  }, [projectId]);
-
-  // Loading state
-  if (loading) {
-    return (
-      <div className="container-fluid text-center mt-5">
-        <div className="spinner-border text-primary" role="status" style={{ width: '3rem', height: '3rem' }}>
-          <span className="visually-hidden">Loading...</span>
-        </div>
-        <p className="mt-3 text-muted">Loading project details...</p>
-      </div>
-    );
-  }
-
-  // Error state
-  if (error || !project) {
-    return (
-      <div className="container-fluid text-center mt-5">
-        <div className="alert alert-danger" role="alert">
-          <i className="bi bi-exclamation-triangle me-2"></i>
-          {error || 'Project not found'}
-        </div>
-        <Link to="/activities" className="btn btn-primary">
-          <i className="bi bi-arrow-left me-2"></i>
-          Back to Activities
-        </Link>
-      </div>
-    );
-  }
-
-
-
-  return (
-    <div className="container-fluid">
-            {/* Back Button */}
-            <div className="mb-4">
-              <Link to="/activities" className="btn btn-outline-primary">
-                <i className="bi bi-arrow-left me-2"></i>
-                Back to Activities
-              </Link>
-            </div>
-
-            {/* Project Header */}
-            <div className="card shadow-lg border-0 mb-4">
-              <div className="row g-0">
-                <div className="col-md-5">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="img-fluid rounded-start h-100"
-                    style={{ objectFit: 'cover', minHeight: '300px' }}
-                  />
-                </div>
-                <div className="col-md-7">
-                  <div className="card-body p-4">
-                    <h1 className="card-title text-primary fw-bold mb-3">{project.title}</h1>
-                    <p className="card-text text-muted mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-                      {project.description}
-                    </p>
-                    <div className="mb-4">
-                      <h6 className="fw-bold text-secondary mb-2">Technologies Used:</h6>
-                      <div className="d-flex flex-wrap gap-2">
-                        {project.technologies.map((tech, index) => (
-                          <span key={index} className="badge bg-primary fs-6 px-3 py-2">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="d-flex gap-2">
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn btn-primary"
-                      >
-                        <i className="bi bi-github me-2"></i>
-                        View Source Code
-                      </a>
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn btn-outline-primary"
-                      >
-                        <i className="bi bi-box-arrow-up-right me-2"></i>
-                        Live Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Details */}
-            <div className="row">
-              {/* Key Features */}
-              <div className="col-md-6 mb-4">
-                <div className="card shadow border-0 h-100">
-                  <div className="card-header bg-success text-white">
-                    <h5 className="mb-0">
-                      <i className="bi bi-check-circle me-2"></i>
-                      Key Features
-                    </h5>
-                  </div>
-                  <div className="card-body">
-                    <ul className="list-unstyled">
-                      {project.features.map((feature, index) => (
-                        <li key={index} className="mb-3 d-flex">
-                          <i className="bi bi-check-lg text-success me-2 mt-1"></i>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Challenges & Solutions */}
-              <div className="col-md-6 mb-4">
-                <div className="card shadow border-0 h-100">
-                  <div className="card-header bg-warning text-white">
-                    <h5 className="mb-0">
-                      <i className="bi bi-lightning me-2"></i>
-                      Challenges & Solutions
-                    </h5>
-                  </div>
-                  <div className="card-body">
-                    <ul className="list-unstyled">
-                      {project.challenges.map((challenge, index) => (
-                        <li key={index} className="mb-3 d-flex">
-                          <i className="bi bi-exclamation-triangle text-warning me-2 mt-1"></i>
-                          <span>{challenge}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Results & Impact */}
-            <div className="card shadow border-0 mb-4">
-              <div className="card-header bg-info text-white">
-                <h5 className="mb-0">
-                  <i className="bi bi-graph-up me-2"></i>
-                  Results & Impact
-                </h5>
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  {project.results.map((result, index) => (
-                    <div key={index} className="col-md-4 mb-3">
-                      <div className="d-flex">
-                        <i className="bi bi-trophy text-info me-2 mt-1"></i>
-                        <span>{result}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation to Other Projects */}
-            <div className="card shadow border-0">
-              <div className="card-header bg-primary text-white">
-                <h5 className="mb-0">
-                  <i className="bi bi-collection me-2"></i>
-                  Other Projects
-                </h5>
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  {relatedProjects.map((otherProject) => (
-                    <div key={otherProject.id} className="col-md-4 mb-3">
-                      <Link to={`/details/${otherProject.id}`} className="text-decoration-none">
-                        <div className="card h-100 hover-shadow" style={{ transition: 'transform 0.2s' }}>
-                          <img 
-                            src={otherProject.image} 
-                            alt={otherProject.title}
-                            className="card-img-top"
-                            style={{ height: '150px', objectFit: 'cover' }}
-                          />
-                          <div className="card-body">
-                            <h6 className="card-title text-dark">{otherProject.title}</h6>
-                            <p className="card-text text-muted small">
-                              {otherProject.description.substring(0, 100)}...
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-    </div>
-  );
+  return <div className="container-fluid"><Link to="/activities" className="btn btn-outline-primary mb-4"><i className="bi bi-arrow-left me-2" />Back to Projects &amp; Awards</Link>
+    <section className="card shadow-lg border-0 mb-4"><div className="row g-0"><div className="col-md-5 p-3">
+      {selectedImage ? <><img src={selectedImage.src} alt={selectedImage.alt} className="img-fluid rounded w-100" style={{ minHeight: 300, maxHeight: 420, objectFit: 'cover' }} />{selectedImage.caption && <p className="small text-muted mt-2 mb-0">{selectedImage.caption}</p>}{project.images.length > 1 && <div className="d-flex flex-wrap gap-2 mt-3" aria-label="Project image gallery">{project.images.map((image, index) => <button className={`border rounded p-0 ${index === activeImage ? 'border-primary border-3' : 'border-light'}`} key={image.src} onClick={() => setActiveImage(index)} aria-label={`Show image ${index + 1}: ${image.alt}`}><img src={image.src} alt="" style={{ width: 72, height: 54, objectFit: 'cover' }} /></button>)}</div>}</> : <div className="bg-light text-muted rounded d-flex flex-column align-items-center justify-content-center" style={{ minHeight: 300 }}><i className="bi bi-images fs-1" /><span>Project images coming soon</span></div>}
+    </div><div className="col-md-7"><div className="card-body p-4"><h1 className="h2 text-primary fw-bold mb-3">{project.title}</h1><p className="text-muted mb-4">{project.description}</p><h2 className="h6 fw-bold text-secondary">Technologies Used</h2><div className="d-flex flex-wrap gap-2">{project.technologies.map(tech => <span key={tech} className="badge bg-primary fs-6 px-3 py-2">{tech}</span>)}</div><div className="d-flex flex-wrap gap-2 mt-4">{project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn project-link-github"><i className="bi bi-github me-2" />GitHub</a>}{project.youtubeUrl ? <a href={project.youtubeUrl} target="_blank" rel="noopener noreferrer" className="btn project-link-youtube"><i className="bi bi-youtube me-2" />YouTube</a> : <span className="btn project-link-youtube disabled" aria-disabled="true" title="YouTube link has not been added yet"><i className="bi bi-youtube me-2" />YouTube</span>}</div></div></div></div></section>
+    <section className="card shadow border-0 mb-4"><div className="card-header bg-success text-white"><h2 className="h5 mb-0">Project Highlights</h2></div><div className="card-body"><ul className="mb-0">{project.features.map(feature => <li className="mb-2" key={feature}>{feature}</li>)}</ul></div></section>
+    <section className="card shadow border-0"><div className="card-header bg-primary text-white"><h2 className="h5 mb-0">Other Projects</h2></div><div className="card-body"><div className="row">{relatedProjects.map(other => <div className="col-md-4 mb-3" key={other.id}><Link className="text-decoration-none" to={`/details/${other.id}`}><div className="card h-100">{other.images[0] ? <img src={other.images[0].src} alt={other.images[0].alt} className="card-img-top" style={{ height: 150, objectFit: 'cover' }} /> : <div className="bg-light text-muted d-flex align-items-center justify-content-center" style={{ height: 150 }}><i className="bi bi-images fs-3" /></div>}<div className="card-body"><h3 className="h6 text-dark">{other.title}</h3></div></div></Link></div>)}</div></div></section>
+  </div>;
 };
 
 export default Details;

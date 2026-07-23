@@ -146,6 +146,7 @@ main section hr { margin: 1.5rem 0; border-color: var(--line); opacity: 1; }
 .project-link-github { background: #24292f !important; border-color: #24292f !important; color: #fff !important; }
 .project-link-youtube { background: #dc2626 !important; border-color: #dc2626 !important; color: #fff !important; }
 .project-link-youtube.disabled { opacity: .5; cursor: not-allowed; }
+.project-link-website { background: var(--blue) !important; border-color: var(--blue) !important; color: #fff !important; }
 .project-link-figma { background: #171717 !important; border-color: #171717 !important; color: #fff !important; }
 .project-link-figma.disabled { opacity: .5; cursor: not-allowed; }
 .figma-logo { width: 14px; height: 21px; object-fit: contain; vertical-align: -5px; }

@@ -8,7 +8,10 @@ export default function AppLayout() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      return;
+    }
     const frameId = requestAnimationFrame(() => {
       document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });

@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
       <div className="container-fluid">
-        <div className="navbar-brand d-flex align-items-center mb-0">
+        <Link to="/" className="navbar-brand d-flex align-items-center mb-0 text-decoration-none" onClick={() => setIsMenuOpen(false)} aria-label="Go to home page">
           <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3"
                style={{ width: '45px', height: '45px' }}>
             <i className="bi bi-code-square text-white fs-4"></i>
@@ -23,7 +23,7 @@ const Navbar = () => {
               Software Engineering Portfolio
             </small>
           </div>
-        </div>
+        </Link>
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -52,10 +52,9 @@ const Navbar = () => {
                 >
                   {section.name}
                   <span 
-                    className={`position-absolute bottom-0 start-0 h-2 bg-primary transition-all duration-300 ${
-                      location.pathname === section.path ? 'w-100' : 'w-0'
-                    }`} 
-                    style={{ transition: 'width 0.3s ease' }}
+                    className={`position-absolute bottom-0 start-0 bg-primary nav-active-indicator ${
+                      location.pathname === section.path ? 'is-active' : ''
+                    }`}
                   ></span>
                 </Link>
               </li>

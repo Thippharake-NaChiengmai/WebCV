@@ -7,9 +7,11 @@ export default function Contact() {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setStatus('Your email app is opening with your message ready to send.');
     setFormData({
       ...formData,
       [name]: value
@@ -33,7 +35,6 @@ export default function Contact() {
       message: ''
     });
 
-    alert("Message sent successfully (if your email client is configured correctly).");
   };
   
   return (
@@ -61,6 +62,7 @@ export default function Contact() {
             onChange={handleChange}
             placeholder="Enter your name"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -73,6 +75,7 @@ export default function Contact() {
             onChange={handleChange}
             placeholder="Enter your email"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -85,14 +88,16 @@ export default function Contact() {
             rows={5}
             placeholder="Enter your message"
             className="form-control"
+            required
           ></textarea>
         </div>
         <button
           type="submit"
-          className="btn btn-success w-100 w-md-auto"
+          className="btn btn-success w-100"
         >
           Send Message
         </button>
+        {status && <p className="text-success small mt-3 mb-0" role="status">{status}</p>}
       </form>
     </section>
   );

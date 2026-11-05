@@ -11,7 +11,7 @@ export default function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setStatus('Your email app is opening with your message ready to send.');
+    setStatus('');
     setFormData({
       ...formData,
       [name]: value
@@ -26,6 +26,7 @@ export default function Contact() {
     const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const mailtoLink = `mailto:${appConfig.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+    setStatus('Your email app is opening with your message ready to send.');
     window.location.href = mailtoLink;
 
     // Reset form after sending

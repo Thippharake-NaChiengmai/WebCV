@@ -9,7 +9,7 @@ export default function AppLayout() {
 
   useEffect(() => {
     if (!location.hash) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       return;
     }
     const frameId = requestAnimationFrame(() => {

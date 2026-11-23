@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import useNavigationProgress from '../hooks/useNavigationProgress';
-import Activities from '../pages/Activities';
-import Details from '../pages/Details';
 import Home from '../pages/Home';
 import AppLayout from './AppLayout';
+
+const Activities = lazy(() => import('../pages/Activities'));
+const Details = lazy(() => import('../pages/Details'));
 
 export default function App() {
   useNavigationProgress();

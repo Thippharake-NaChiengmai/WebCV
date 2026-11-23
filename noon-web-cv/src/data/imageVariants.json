@@ -1,0 +1,938 @@
+{
+  "/images/awards/Cursor-Hackathon-Chiang-Mai-2025/img1.jpg": {
+    "width": 4284,
+    "height": 5712,
+    "variants": [
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img1.jpg-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img1.jpg-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img1.jpg-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/awards/Cursor-Hackathon-Chiang-Mai-2025/img2.JPG": {
+    "width": 1179,
+    "height": 660,
+    "variants": [
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img2.JPG-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img2.JPG-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img2.JPG-1179.webp",
+        "width": 1179
+      }
+    ]
+  },
+  "/images/awards/Cursor-Hackathon-Chiang-Mai-2025/img3.jpg": {
+    "width": 3024,
+    "height": 4032,
+    "variants": [
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img3.jpg-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img3.jpg-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img3.jpg-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/awards/Cursor-Hackathon-Chiang-Mai-2025/img4.JPG": {
+    "width": 8064,
+    "height": 4536,
+    "variants": [
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img4.JPG-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img4.JPG-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img4.JPG-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/awards/Cursor-Hackathon-Chiang-Mai-2025/img5.jpg": {
+    "width": 5712,
+    "height": 4284,
+    "variants": [
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img5.jpg-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img5.jpg-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/awards/Cursor-Hackathon-Chiang-Mai-2025/img5.jpg-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/cvImg.png": {
+    "width": 864,
+    "height": 1184,
+    "variants": [
+      {
+        "src": "/images/optimized/cvImg.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/cvImg.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/cvImg.png-864.webp",
+        "width": 864
+      }
+    ]
+  },
+  "/images/projects/AsterroidGame/img1.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/AsterroidGame/img2.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/AsterroidGame/img3.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/AsterroidGame/img4.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/AsterroidGame/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img1.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img2.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img3.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img4.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img5.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img5.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img5.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img5.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img6.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img6.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img6.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img6.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Binner/img7.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Binner/img7.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img7.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Binner/img7.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img1.png": {
+    "width": 1920,
+    "height": 2564,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img2.png": {
+    "width": 1920,
+    "height": 3592,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img3.png": {
+    "width": 1920,
+    "height": 1671,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img4.png": {
+    "width": 1920,
+    "height": 1112,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img5.png": {
+    "width": 1920,
+    "height": 972,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img5.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img5.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img5.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img6.png": {
+    "width": 1920,
+    "height": 959,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img6.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img6.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img6.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img7.png": {
+    "width": 1920,
+    "height": 1250,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img7.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img7.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img7.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/CJstreetwareWebsite/img8.png": {
+    "width": 1920,
+    "height": 1028,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img8.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img8.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/CJstreetwareWebsite/img8.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img1.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img2.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img3.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img4.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img5.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img5.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img5.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img5.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img6.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img6.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img6.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img6.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img7.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img7.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img7.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img7.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/Doctor-AOI/img8.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img8.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img8.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/Doctor-AOI/img8.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ImagesCrop/img1.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ImagesCrop/img2.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ImagesCrop/img3.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ImagesCrop/img4.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ImagesCrop/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img1.png": {
+    "width": 1920,
+    "height": 1173,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img2.png": {
+    "width": 1920,
+    "height": 1173,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img3.png": {
+    "width": 1920,
+    "height": 911,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img4.png": {
+    "width": 1920,
+    "height": 1502,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img5.png": {
+    "width": 1920,
+    "height": 911,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img5.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img5.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img5.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img6.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img6.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img6.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img6.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/RealOrFaKe/img7.png": {
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img7.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img7.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/RealOrFaKe/img7.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img1.png": {
+    "width": 1912,
+    "height": 1070,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img1.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img1.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img1.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img2.png": {
+    "width": 1910,
+    "height": 872,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img2.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img2.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img2.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img3.png": {
+    "width": 1910,
+    "height": 892,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img3.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img3.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img3.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img4.png": {
+    "width": 1912,
+    "height": 1089,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img4.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img4.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img4.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img5.png": {
+    "width": 1910,
+    "height": 872,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img5.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img5.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img5.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img6.png": {
+    "width": 1910,
+    "height": 2049,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img6.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img6.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img6.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img7.png": {
+    "width": 1912,
+    "height": 914,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img7.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img7.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img7.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/projects/ReelCast/img8.png": {
+    "width": 1912,
+    "height": 914,
+    "variants": [
+      {
+        "src": "/images/optimized/projects/ReelCast/img8.png-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img8.png-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/optimized/projects/ReelCast/img8.png-1280.webp",
+        "width": 1280
+      }
+    ]
+  }
+}

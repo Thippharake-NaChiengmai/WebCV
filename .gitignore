@@ -21,6 +21,9 @@ build/Release
 # TypeScript cache
 *.tsbuildinfo
 
+# Generated skill output (Graphify graphs, reports, and caches)
+graphify-out/
+
 # Framework build output and caches
 .cache
 .parcel-cache

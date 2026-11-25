@@ -13,18 +13,19 @@ export default function AppLayout() {
       return;
     }
     const frameId = requestAnimationFrame(() => {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
     });
     return () => cancelAnimationFrame(frameId);
-  }, [location.hash, location.pathname]);
+  }, [location.hash, location.pathname, location.search]);
 
   return (
     <div className="min-vh-100 bg-light d-flex flex-column">
+      <a className="skip-link" href="#main-content">Skip to Main Content</a>
       <Navbar />
       <div className="row g-0 flex-grow-1">
         <Sidebar />
-        <main className="col-12 col-md-9 p-4">
-          <Suspense fallback={<div className="text-center py-5" role="status"><span className="spinner-border text-primary" /><span className="visually-hidden">Loading page...</span></div>}>
+        <main id="main-content" tabIndex={-1} className="col-12 col-md-9 p-4">
+          <Suspense fallback={<div className="text-center py-5" role="status"><span className="spinner-border text-primary" aria-hidden="true" /><span className="visually-hidden">Loading page…</span></div>}>
             <Outlet />
           </Suspense>
         </main>

@@ -14,9 +14,9 @@ const Footer = () => {
                         <div className="d-flex align-items-center mb-3">
                             <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3"
                                  style={{ width: '40px', height: '40px' }}>
-                                <i className="bi bi-code-slash text-white"></i>
+                                <i aria-hidden="true" className="bi bi-code-slash text-white"></i>
                             </div>
-                            <h5 className="mb-0 fw-bold">Thippharake Na Chiengmai</h5>
+                            <p className="h5 mb-0 fw-bold">Thippharake Na Chiengmai</p>
                         </div>
                         <p className="text-muted mb-3">
                             Software Engineering intern focused on scalable, end-to-end software solutions.
@@ -25,7 +25,7 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="col-lg-2 col-md-6">
-                        <h6 className="fw-semibold mb-3 text-dark">Quick Links</h6>
+                        <h2 className="h6 fw-semibold mb-3 text-dark">Quick Links</h2>
                         <ul className="list-unstyled">
                             <li className="mb-2">
                                 <Link to="/#intro" className="text-decoration-none text-muted">About</Link>
@@ -44,20 +44,20 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div className="col-lg-3 col-md-6">
-                        <h6 className="fw-semibold mb-3 text-dark">Contact Info</h6>
+                        <h2 className="h6 fw-semibold mb-3 text-dark">Contact Info</h2>
                         <ul className="list-unstyled">
                             <li className="mb-2 d-flex align-items-center">
-                                <i className="bi bi-geo-alt text-primary me-2"></i>
+                                <i aria-hidden="true" className="bi bi-geo-alt text-primary me-2"></i>
                                 <span className="text-muted">Chiang Mai, Thailand</span>
                             </li>
                             <li className="mb-2 d-flex align-items-center">
-                                <i className="bi bi-envelope text-primary me-2"></i>
+                                <i aria-hidden="true" className="bi bi-envelope text-primary me-2"></i>
                                 <a className="text-muted text-decoration-none" href={`mailto:${appConfig.contactEmail}`}>
                                     {appConfig.contactEmail}
                                 </a>
                             </li>
                             <li className="mb-2 d-flex align-items-center">
-                                <i className="bi bi-building text-primary me-2"></i>
+                                <i aria-hidden="true" className="bi bi-building text-primary me-2"></i>
                                 <span className="text-muted">CAMT, Chiang Mai University</span>
                             </li>
                         </ul>
@@ -65,11 +65,11 @@ const Footer = () => {
 
                     {/* Contact */}
                     <div className="col-lg-3 col-md-6">
-                        <h6 className="fw-semibold mb-3 text-dark">Get in Touch</h6>
+                        <h2 className="h6 fw-semibold mb-3 text-dark">Get in Touch</h2>
                         <p className="text-muted small mb-3">
                             Contact me for more information about my experience and projects.
                         </p>
-                        <a href={`mailto:${appConfig.contactEmail}`} className="btn btn-outline-primary btn-sm w-100"><i className="bi bi-envelope me-2"></i>Email Me</a>
+                        <a href={`mailto:${appConfig.contactEmail}`} className="btn btn-outline-primary btn-sm w-100"><i aria-hidden="true" className="bi bi-envelope me-2"></i>Email Me</a>
                     </div>
                 </div>
 

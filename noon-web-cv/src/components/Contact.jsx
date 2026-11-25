@@ -28,14 +28,6 @@ export default function Contact() {
 
     setStatus('Your email app is opening with your message ready to send.');
     window.location.href = mailtoLink;
-
-    // Reset form after sending
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
-
   };
   
   return (
@@ -44,7 +36,7 @@ export default function Contact() {
         <div className="me-3">
           <div className="bg-primary rounded-circle d-flex align-items-center justify-content-center" 
                style={{ width: '60px', height: '60px' }}>
-            <i className="bi bi-envelope-fill text-white fs-4"></i>
+            <i aria-hidden="true" className="bi bi-envelope-fill text-white fs-4"></i>
           </div>
         </div>
         <div>
@@ -52,7 +44,8 @@ export default function Contact() {
         </div>
       </div>
       
-      <form onSubmit={handleSubmit}>
+      <p id="contact-help" className="text-secondary mb-4">This opens your email app with a draft. Review it there before sending.</p>
+      <form onSubmit={handleSubmit} aria-describedby="contact-help">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input
@@ -61,7 +54,8 @@ export default function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter your name"
+            autoComplete="name"
+            placeholder="Your name…"
             className="form-control"
             required
           />
@@ -74,7 +68,9 @@ export default function Contact() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email"
+            autoComplete="email"
+            spellCheck={false}
+            placeholder="you@example.com…"
             className="form-control"
             required
           />
@@ -87,7 +83,8 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            placeholder="Enter your message"
+            autoComplete="off"
+            placeholder="What would you like to discuss?…"
             className="form-control"
             required
           ></textarea>
@@ -96,7 +93,7 @@ export default function Contact() {
           type="submit"
           className="btn btn-success w-100"
         >
-          Send Message
+          Open Email Draft
         </button>
         {status && <p className="text-success small mt-3 mb-0" role="status">{status}</p>}
       </form>
